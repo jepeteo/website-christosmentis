@@ -50,12 +50,14 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link
-                  href="/press"
-                  className="text-cm-muted transition-colors hover:text-cm-primary"
-                >
-                  Press & Media
-                </Link>
+                <span className="cursor-not-allowed text-cm-muted/50">
+                  Press (Coming Soon)
+                </span>
+              </li>
+              <li>
+                <span className="cursor-not-allowed text-cm-muted/50">
+                  Release (Coming Soon)
+                </span>
               </li>
             </ul>
           </div>

@@ -27,13 +27,16 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Portrait - Placeholder */}
+            {/* Portrait */}
             <div className="mb-12">
               <div className="relative mx-auto aspect-square max-w-md overflow-hidden rounded-lg bg-cm-surface">
-                {/* Replace with actual portrait when available */}
-                <div className="flex h-full items-center justify-center">
-                  <p className="text-cm-muted">Portrait Coming Soon</p>
-                </div>
+                <Image
+                  src="/images/christos-mentis.webp"
+                  alt="Christos Mentis - Author Portrait"
+                  fill
+                  className="object-cover"
+                  priority
+                />
               </div>
             </div>
 
