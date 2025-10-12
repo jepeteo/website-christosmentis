@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+        --font-inter: 'Inter', system-ui, sans-serif;
+    }
+
+    body {
+        @apply bg-cm-bg text-cm-body font-body;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-display text-cm-headline;
+    }
+
+    /* Focus states for accessibility */
+    *:focus-visible {
+        @apply outline-2 outline-offset-2 outline-cm-primary;
+    }
+}
+
+@layer components {
+
+    /* Prose styling for MDX content */
+    .prose-cm {
+        @apply prose prose-invert max-w-none;
+        @apply prose-headings:font-display prose-headings:text-cm-headline;
+        @apply prose-p:text-cm-body prose-p:text-body;
+        @apply prose-a:text-cm-primary prose-a:no-underline hover:prose-a:underline;
+        @apply prose-strong:text-cm-headline prose-strong:font-semibold;
+        @apply prose-code:text-cm-secondary prose-code:bg-cm-surface;
+        @apply prose-pre:bg-cm-surface prose-pre:border prose-pre:border-cm-divider;
+    }
+
+    /* Scrollbar styling */
+    .scrollbar-thin::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-track {
+        @apply bg-cm-surface;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb {
+        @apply bg-cm-divider rounded;
+    }
+
+    .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+        @apply bg-cm-muted;
+    }
+}
+
+@layer utilities {
+
+    /* Reduce motion support */
+    @media (prefers-reduced-motion: reduce) {
+
+        *,
+        *::before,
+        *::after {
+            animation-duration: 0.01ms !important;
+            animation-iteration-count: 1 !important;
+            transition-duration: 0.01ms !important;
+        }
+    }
+}

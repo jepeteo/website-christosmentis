@@ -1,0 +1,13 @@
+<!-- Placeholder OG image -->
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0B0F14"/>
+  <text x="600" y="280" font-family="serif" font-size="72" fill="#EAE7DF" text-anchor="middle" font-weight="bold">
+    Christos Mentis
+  </text>
+  <text x="600" y="350" font-family="sans-serif" font-size="32" fill="#9CA3AF" text-anchor="middle">
+    Greek Author
+  </text>
+  <text x="600" y="400" font-family="sans-serif" font-size="24" fill="#8FA3B8" text-anchor="middle">
+    Psychological Crime Fiction
+  </text>
+</svg>
