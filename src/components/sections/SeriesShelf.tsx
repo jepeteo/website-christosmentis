@@ -35,14 +35,9 @@ export function SeriesShelf({ title, books, seriesSlug }: SeriesShelfProps) {
             <h2 className="font-display text-2xl font-bold text-cm-headline md:text-3xl">
               {title}
             </h2>
-            {seriesSlug && (
-              <Link
-                href={`/series/${seriesSlug}`}
-                className="mt-2 inline-block text-sm text-cm-primary hover:underline"
-              >
-                View Series →
-              </Link>
-            )}
+            <p className="mt-2 text-sm text-cm-muted">
+              A psychological crime series exploring the killer's mind
+            </p>
           </div>
 
           <div className="hidden gap-2 md:flex">
