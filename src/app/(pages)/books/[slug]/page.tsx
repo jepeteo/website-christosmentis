@@ -21,9 +21,10 @@ export async function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
-  const book = await getBookBySlug(params.slug);
+  const { slug } = await params;
+  const book = await getBookBySlug(slug);
 
   if (!book) {
     return {
@@ -45,9 +46,10 @@ export async function generateMetadata({
 export default async function BookPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const book = await getBookBySlug(params.slug);
+  const { slug } = await params;
+  const book = await getBookBySlug(slug);
 
   if (!book) {
     notFound();
