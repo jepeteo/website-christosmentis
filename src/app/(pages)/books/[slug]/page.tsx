@@ -154,6 +154,7 @@ export default async function BookPage({
                           href={link.url}
                           target="_blank"
                           rel="noopener noreferrer"
+                          className="inline-flex items-center"
                         >
                           {link.label}
                           <ExternalLink className="ml-2 h-4 w-4" />
