@@ -24,6 +24,7 @@ export function Navigation() {
           <Link
             key={item.href}
             href={item.href}
+            prefetch={true}
             className={cn(
               "text-base font-medium transition-colors hover:text-cm-primary",
               isActive ? "text-cm-headline" : "text-cm-muted"
