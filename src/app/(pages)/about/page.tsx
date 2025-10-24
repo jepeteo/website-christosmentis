@@ -97,6 +97,22 @@ export default function AboutPage() {
                 us human."
               </blockquote>
             </div>
+
+            {/* Contact */}
+            <div className="mt-8 rounded-lg border border-cm-divider bg-cm-surface p-8">
+              <h2 className="mb-4 font-display text-2xl font-semibold text-cm-headline">
+                Get in Touch
+              </h2>
+              <p className="mb-4 text-cm-body">
+                For inquiries, media requests, or just to say hello:
+              </p>
+              <a
+                href="mailto:hello@christosmentis.com"
+                className="inline-flex items-center text-lg font-medium text-cm-primary transition-colors hover:text-cm-primary/80"
+              >
+                hello@christosmentis.com
+              </a>
+            </div>
           </div>
         </div>
 

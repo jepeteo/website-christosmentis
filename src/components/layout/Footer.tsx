@@ -13,10 +13,17 @@ export function Footer() {
             <h3 className="mb-4 font-display text-lg font-semibold text-cm-headline">
               Christos Mentis
             </h3>
-            <p className="text-sm text-cm-muted">
+            <p className="mb-4 text-sm text-cm-muted">
               Greek author writing psychological crime fiction. Exploring the
               depths of the human psyche.
             </p>
+            <a
+              href="mailto:hello@christosmentis.com"
+              className="inline-flex items-center space-x-2 text-sm text-cm-primary transition-colors hover:text-cm-primary/80"
+            >
+              <Mail className="h-4 w-4" />
+              <span>hello@christosmentis.com</span>
+            </a>
           </div>
 
           {/* Quick Links */}
