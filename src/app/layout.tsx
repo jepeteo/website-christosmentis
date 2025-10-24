@@ -17,6 +17,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://christosmentis.com"),
   title: {
     default: "Christos Mentis - Author",
     template: "%s | Christos Mentis",
@@ -30,9 +31,23 @@ export const metadata: Metadata = {
     "crime fiction",
     "Killer Mind series",
     "Fragments of a Killer Mind",
+    "psychological suspense",
+    "literary thriller",
   ],
-  authors: [{ name: "Christos Mentis" }],
+  authors: [{ name: "Christos Mentis", url: "https://christosmentis.com" }],
   creator: "Christos Mentis",
+  publisher: "Christos Mentis",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -57,7 +72,9 @@ export const metadata: Metadata = {
       "Greek author writing psychological crime fiction. Exploring the depths of the human psyche.",
     images: ["/images/og-image.jpg"],
   },
-  metadataBase: new URL("https://christosmentis.com"),
+  alternates: {
+    canonical: "https://christosmentis.com",
+  },
 };
 
 export default function RootLayout({

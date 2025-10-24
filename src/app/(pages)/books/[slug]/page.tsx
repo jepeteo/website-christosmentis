@@ -35,10 +35,19 @@ export async function generateMetadata({
   return {
     title: book.title,
     description: book.logline,
+    keywords: [...book.tags, book.title, "Christos Mentis", book.genre],
     openGraph: {
       title: book.title,
       description: book.logline,
-      images: [{ url: book.cover }],
+      type: "book",
+      images: [{ url: book.cover, alt: book.title }],
+      authors: ["Christos Mentis"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: book.title,
+      description: book.logline,
+      images: [book.cover],
     },
   };
 }
@@ -55,8 +64,48 @@ export default async function BookPage({
     notFound();
   }
 
+  // Structured Data for Book
+  const bookStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    name: book.title,
+    author: {
+      "@type": "Person",
+      name: "Christos Mentis",
+      url: "https://christosmentis.com",
+    },
+    isbn: book.isbn,
+    bookFormat: book.format?.includes("eBook") ? "EBook" : "Paperback",
+    numberOfPages: book.pages,
+    datePublished: book.publishDate,
+    publisher: {
+      "@type": "Organization",
+      name: "Lulu",
+    },
+    description: book.logline,
+    genre: book.tags.join(", "),
+    inLanguage: "en",
+    image: `https://christosmentis.com${book.cover}`,
+    url: `https://christosmentis.com/books/${book.slug}`,
+    offers: book.purchaseLinks.map((link) => ({
+      "@type": "Offer",
+      availability: "https://schema.org/InStock",
+      price: "0",
+      priceCurrency: "USD",
+      url: link.url,
+      seller: {
+        "@type": "Organization",
+        name: "Lulu",
+      },
+    })),
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(bookStructuredData) }}
+      />
       <Header />
       <main className="min-h-screen">
         <div className="container mx-auto px-4 py-12">

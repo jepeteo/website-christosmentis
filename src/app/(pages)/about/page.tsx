@@ -7,12 +7,64 @@ import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Learn about Christos Mentis, Greek author exploring the depths of the human psyche through psychological crime fiction.",
+    "Learn about Christos Mentis, Greek author exploring the depths of the human psyche through psychological crime fiction. Discover his writing philosophy and background.",
+  keywords: [
+    "Christos Mentis",
+    "author biography",
+    "Greek author",
+    "psychological thriller author",
+    "crime fiction writer",
+  ],
+  openGraph: {
+    title: "About Christos Mentis",
+    description:
+      "Greek author exploring the depths of the human psyche through psychological crime fiction.",
+    images: [
+      {
+        url: "/images/christos-mentis.webp",
+        width: 800,
+        height: 1120,
+        alt: "Christos Mentis",
+      },
+    ],
+  },
 };
 
 export default function AboutPage() {
+  // Structured Data for Author Profile
+  const authorStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: "Christos Mentis",
+    url: "https://christosmentis.com",
+    image: "https://christosmentis.com/images/christos-mentis.webp",
+    jobTitle: "Author",
+    description:
+      "Christos Mentis is a Greek author whose writing delves into the depths of the human psyche, exploring the fragile balance between darkness and redemption.",
+    nationality: "Greek",
+    email: "hello@christosmentis.com",
+    knowsAbout: [
+      "Psychological Thriller",
+      "Crime Fiction",
+      "Psychological Suspense",
+      "Literary Fiction",
+    ],
+    sameAs: [],
+    works: [
+      {
+        "@type": "Book",
+        name: "Fragments of a Killer Mind",
+        url: "https://christosmentis.com/books/fragments-of-a-killer-mind",
+      },
+    ],
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(authorStructuredData) }}
+      />
       <Header />
       <main className="min-h-screen">
         <div className="container mx-auto px-4 py-16">
