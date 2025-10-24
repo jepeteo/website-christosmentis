@@ -9,9 +9,21 @@ import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
 import { getAllBooks, getBooksInSeries, getBooksByGenre } from "@/lib/mdx";
 
 export const metadata: Metadata = {
-  title: "Home",
+  title: "Christos Mentis | Greek Author of Psychological Thrillers & Crime Fiction",
   description:
-    "Christos Mentis is a Greek author writing psychological crime fiction that explores the depths of the human psyche. Read Fragments of a Killer Mind and the Killer Mind series.",
+    "Discover dark psychological thrillers by Greek author Christos Mentis. Read 'Fragments of a Killer Mind' and explore the Killer Mind series—where obsession meets murder and the line between hunter and hunted blurs.",
+  keywords: [
+    "Christos Mentis",
+    "Greek author",
+    "psychological thriller",
+    "crime fiction",
+    "psychological suspense",
+    "Fragments of a Killer Mind",
+    "Killer Mind series",
+    "serial killer fiction",
+    "FBI thriller",
+    "dark thrillers",
+  ],
   openGraph: {
     title: "Christos Mentis — Author of Psychological Crime Fiction",
     description:
