@@ -50,6 +50,14 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="/contact"
+                  className="text-cm-muted transition-colors hover:text-cm-primary"
+                >
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="/newsletter"
                   className="text-cm-muted transition-colors hover:text-cm-primary"
                 >
