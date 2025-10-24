@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Cormorant_Garamond, Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
+import { CookieConsent } from "@/components/layout/CookieConsent";
+import { CookieSettingsButton } from "@/components/layout/CookieSettingsButton";
 import "./globals.css";
 
 const cormorant = Cormorant_Garamond({
@@ -110,6 +112,8 @@ export default function RootLayout({
       </head>
       <body>
         {children}
+        <CookieConsent />
+        <CookieSettingsButton />
         <Analytics />
       </body>
     </html>
