@@ -22,9 +22,7 @@ export default function ContactPage() {
               <h1 className="mb-4 font-display text-4xl font-bold text-cm-headline md:text-5xl">
                 Get in Touch
               </h1>
-              <p className="text-xl text-cm-muted">
-                I'd love to hear from you
-              </p>
+              <p className="text-xl text-cm-muted">I'd love to hear from you</p>
             </div>
 
             <div className="grid gap-8 md:grid-cols-2">

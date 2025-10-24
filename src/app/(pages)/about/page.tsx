@@ -63,7 +63,9 @@ export default function AboutPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(authorStructuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(authorStructuredData),
+        }}
       />
       <Header />
       <main className="min-h-screen">

@@ -1,19 +1,23 @@
 {
-  "name": "Christos Mentis - Author",
-  "short_name": "C. Mentis",
-  "description": "Greek author writing psychological crime fiction exploring the depths of the human psyche",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#0B0F14",
-  "theme_color": "#C0A36E",
-  "orientation": "portrait-primary",
-  "icons": [
-    {
-      "src": "/favicon.ico",
-      "sizes": "any",
-      "type": "image/x-icon"
-    }
-  ],
-  "categories": ["books", "entertainment", "lifestyle"],
-  "lang": "en-US"
+    "name": "Christos Mentis - Author",
+    "short_name": "C. Mentis",
+    "description": "Greek author writing psychological crime fiction exploring the depths of the human psyche",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#0B0F14",
+    "theme_color": "#C0A36E",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/favicon.ico",
+            "sizes": "any",
+            "type": "image/x-icon"
+        }
+    ],
+    "categories": [
+        "books",
+        "entertainment",
+        "lifestyle"
+    ],
+    "lang": "en-US"
 }

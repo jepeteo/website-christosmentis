@@ -9,7 +9,8 @@ import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
 import { getAllBooks, getBooksInSeries, getBooksByGenre } from "@/lib/mdx";
 
 export const metadata: Metadata = {
-  title: "Christos Mentis | Greek Author of Psychological Thrillers & Crime Fiction",
+  title:
+    "Christos Mentis | Greek Author of Psychological Thrillers & Crime Fiction",
   description:
     "Discover dark psychological thrillers by Greek author Christos Mentis. Read 'Fragments of a Killer Mind' and explore the Killer Mind series—where obsession meets murder and the line between hunter and hunted blurs.",
   keywords: [
@@ -69,7 +70,9 @@ export default async function HomePage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(authorStructuredData) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(authorStructuredData),
+        }}
       />
       <Header />
       <main className="min-h-screen">

@@ -29,7 +29,10 @@ export default function CookiePage() {
                   What Are Cookies?
                 </h2>
                 <p className="text-cm-body">
-                  Cookies are small text files that are placed on your device when you visit our website. They help us provide you with a better browsing experience and allow us to understand how our website is being used.
+                  Cookies are small text files that are placed on your device
+                  when you visit our website. They help us provide you with a
+                  better browsing experience and allow us to understand how our
+                  website is being used.
                 </p>
               </section>
 
@@ -44,7 +47,10 @@ export default function CookiePage() {
                       1. Necessary Cookies
                     </h3>
                     <p className="text-sm text-cm-body">
-                      These cookies are essential for the website to function properly. They enable basic functions like page navigation and access to secure areas. The website cannot function properly without these cookies.
+                      These cookies are essential for the website to function
+                      properly. They enable basic functions like page navigation
+                      and access to secure areas. The website cannot function
+                      properly without these cookies.
                     </p>
                     <p className="mt-2 text-xs text-cm-muted">
                       Examples: Session cookies, cookie consent preferences
@@ -56,12 +62,15 @@ export default function CookiePage() {
                       2. Analytics Cookies
                     </h3>
                     <p className="text-sm text-cm-body">
-                      These cookies help us understand how visitors interact with our website by collecting and reporting information anonymously. We use Google Analytics for this purpose.
+                      These cookies help us understand how visitors interact
+                      with our website by collecting and reporting information
+                      anonymously. We use Google Analytics for this purpose.
                     </p>
                     <p className="mt-2 text-xs text-cm-muted">
                       Provider: Google Analytics
                       <br />
-                      Purpose: Website usage statistics, visitor demographics (anonymous)
+                      Purpose: Website usage statistics, visitor demographics
+                      (anonymous)
                       <br />
                       Duration: Up to 2 years
                       <br />
@@ -74,7 +83,9 @@ export default function CookiePage() {
                       3. Marketing Cookies
                     </h3>
                     <p className="text-sm text-cm-body">
-                      We do not currently use marketing or advertising cookies. This category is reserved for future use if we decide to implement targeted advertising.
+                      We do not currently use marketing or advertising cookies.
+                      This category is reserved for future use if we decide to
+                      implement targeted advertising.
                     </p>
                   </div>
                 </div>
@@ -85,7 +96,9 @@ export default function CookiePage() {
                   Google Analytics
                 </h2>
                 <p className="text-cm-body">
-                  We use Google Analytics to analyze website traffic and user behavior. Google Analytics uses cookies to collect information such as:
+                  We use Google Analytics to analyze website traffic and user
+                  behavior. Google Analytics uses cookies to collect information
+                  such as:
                 </p>
                 <ul className="list-disc pl-6 text-cm-body">
                   <li>Pages visited and time spent on site</li>
@@ -94,10 +107,13 @@ export default function CookiePage() {
                   <li>Referral source (how you found our site)</li>
                 </ul>
                 <p className="mt-3 text-cm-body">
-                  <strong>IP Anonymization:</strong> We have enabled IP anonymization, which means your IP address is truncated before being stored by Google.
+                  <strong>IP Anonymization:</strong> We have enabled IP
+                  anonymization, which means your IP address is truncated before
+                  being stored by Google.
                 </p>
                 <p className="mt-3 text-cm-body">
-                  <strong>Data Processing:</strong> Google processes this data in the United States. For more information, read{" "}
+                  <strong>Data Processing:</strong> Google processes this data
+                  in the United States. For more information, read{" "}
                   <a
                     href="https://policies.google.com/privacy"
                     target="_blank"
@@ -119,13 +135,19 @@ export default function CookiePage() {
                 </p>
                 <ul className="list-disc pl-6 text-cm-body">
                   <li>
-                    <strong>Cookie Banner:</strong> When you first visit our site, you'll see a cookie consent banner where you can accept or reject non-essential cookies.
+                    <strong>Cookie Banner:</strong> When you first visit our
+                    site, you'll see a cookie consent banner where you can
+                    accept or reject non-essential cookies.
                   </li>
                   <li>
-                    <strong>Cookie Settings Button:</strong> Click the cookie icon in the bottom-right corner of any page to change your preferences at any time.
+                    <strong>Cookie Settings Button:</strong> Click the cookie
+                    icon in the bottom-right corner of any page to change your
+                    preferences at any time.
                   </li>
                   <li>
-                    <strong>Browser Settings:</strong> You can also control cookies through your browser settings. Note that disabling cookies may affect website functionality.
+                    <strong>Browser Settings:</strong> You can also control
+                    cookies through your browser settings. Note that disabling
+                    cookies may affect website functionality.
                   </li>
                 </ul>
               </section>
@@ -135,20 +157,25 @@ export default function CookiePage() {
                   How to Delete Cookies
                 </h2>
                 <p className="text-cm-body">
-                  You can delete cookies already stored on your device through your browser settings:
+                  You can delete cookies already stored on your device through
+                  your browser settings:
                 </p>
                 <ul className="list-disc pl-6 text-cm-body">
                   <li>
-                    <strong>Chrome:</strong> Settings → Privacy and security → Clear browsing data
+                    <strong>Chrome:</strong> Settings → Privacy and security →
+                    Clear browsing data
                   </li>
                   <li>
-                    <strong>Firefox:</strong> Settings → Privacy & Security → Clear Data
+                    <strong>Firefox:</strong> Settings → Privacy & Security →
+                    Clear Data
                   </li>
                   <li>
-                    <strong>Safari:</strong> Preferences → Privacy → Manage Website Data
+                    <strong>Safari:</strong> Preferences → Privacy → Manage
+                    Website Data
                   </li>
                   <li>
-                    <strong>Edge:</strong> Settings → Privacy, search, and services → Clear browsing data
+                    <strong>Edge:</strong> Settings → Privacy, search, and
+                    services → Clear browsing data
                   </li>
                 </ul>
               </section>
@@ -158,7 +185,9 @@ export default function CookiePage() {
                   Third-Party Cookies
                 </h2>
                 <p className="text-cm-body">
-                  We only use Google Analytics as a third-party service. We do not allow other third parties to set cookies through our website.
+                  We only use Google Analytics as a third-party service. We do
+                  not allow other third parties to set cookies through our
+                  website.
                 </p>
               </section>
 
@@ -167,7 +196,9 @@ export default function CookiePage() {
                   Changes to This Policy
                 </h2>
                 <p className="text-cm-body">
-                  We may update this Cookie Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date.
+                  We may update this Cookie Policy from time to time. Any
+                  changes will be posted on this page with an updated "Last
+                  updated" date.
                 </p>
               </section>
 
@@ -176,7 +207,8 @@ export default function CookiePage() {
                   Contact Us
                 </h2>
                 <p className="text-cm-body">
-                  If you have questions about our use of cookies, please contact us at{" "}
+                  If you have questions about our use of cookies, please contact
+                  us at{" "}
                   <a
                     href="mailto:hello@christosmentis.com"
                     className="text-cm-primary hover:underline"

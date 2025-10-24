@@ -41,10 +41,16 @@ export function CookieConsent() {
       setShowBanner(false);
     };
 
-    window.addEventListener("openCookieSettings", handleOpenSettings as EventListener);
+    window.addEventListener(
+      "openCookieSettings",
+      handleOpenSettings as EventListener
+    );
 
     return () => {
-      window.removeEventListener("openCookieSettings", handleOpenSettings as EventListener);
+      window.removeEventListener(
+        "openCookieSettings",
+        handleOpenSettings as EventListener
+      );
     };
   }, []);
 
@@ -121,7 +127,11 @@ export function CookieConsent() {
                   <Button onClick={acceptAll} size="sm">
                     Accept All
                   </Button>
-                  <Button onClick={acceptNecessary} variant="secondary" size="sm">
+                  <Button
+                    onClick={acceptNecessary}
+                    variant="secondary"
+                    size="sm"
+                  >
                     Necessary Only
                   </Button>
                   <Button
@@ -222,7 +232,8 @@ export function CookieConsent() {
                     Marketing Cookies
                   </h4>
                   <p className="text-sm text-cm-muted">
-                    Not currently used. Reserved for future advertising features.
+                    Not currently used. Reserved for future advertising
+                    features.
                   </p>
                 </div>
                 <label className="relative inline-flex cursor-not-allowed items-center">
@@ -248,11 +259,17 @@ export function CookieConsent() {
 
             <p className="mt-4 text-xs text-cm-muted">
               For more information, read our{" "}
-              <a href="/legal/privacy" className="text-cm-primary hover:underline">
+              <a
+                href="/legal/privacy"
+                className="text-cm-primary hover:underline"
+              >
                 Privacy Policy
               </a>{" "}
               and{" "}
-              <a href="/legal/cookies" className="text-cm-primary hover:underline">
+              <a
+                href="/legal/cookies"
+                className="text-cm-primary hover:underline"
+              >
                 Cookie Policy
               </a>
               .

@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 };
 
 export default function TermsPage() {
-  const lastUpdated = "October 12, 2025";
+  const lastUpdated = "October 24, 2025";
 
   return (
     <>
@@ -115,8 +115,72 @@ export default function TermsPage() {
                 </h2>
                 <p className="text-cm-body">
                   If you have any questions about these Terms of Service, please
-                  contact us through the contact information provided on our
-                  website.
+                  contact us at{" "}
+                  <a
+                    href="mailto:hello@christosmentis.com"
+                    className="text-cm-primary hover:underline"
+                  >
+                    hello@christosmentis.com
+                  </a>
+                  .
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-3 font-display text-2xl font-semibold text-cm-headline">
+                  Newsletter Terms
+                </h2>
+                <p className="text-cm-body">
+                  By subscribing to our newsletter, you agree to receive
+                  periodic emails about new books, updates, and related content.
+                  You can unsubscribe at any time by clicking the unsubscribe
+                  link in any email or by contacting us directly. We will not
+                  share your email address with third parties for marketing
+                  purposes.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-3 font-display text-2xl font-semibold text-cm-headline">
+                  Cookie Usage
+                </h2>
+                <p className="text-cm-body">
+                  By using this website, you acknowledge that we use cookies as
+                  described in our{" "}
+                  <a
+                    href="/legal/cookies"
+                    className="text-cm-primary hover:underline"
+                  >
+                    Cookie Policy
+                  </a>
+                  . You can manage your cookie preferences at any time using the
+                  cookie settings button on our website.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-3 font-display text-2xl font-semibold text-cm-headline">
+                  Governing Law
+                </h2>
+                <p className="text-cm-body">
+                  These terms shall be governed by and construed in accordance
+                  with the laws of Greece, without regard to its conflict of law
+                  provisions. Any disputes arising under these terms shall be
+                  subject to the exclusive jurisdiction of the courts of Greece.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="mb-3 font-display text-2xl font-semibold text-cm-headline">
+                  User-Generated Content
+                </h2>
+                <p className="text-cm-body">
+                  If you submit any content through our contact form or other
+                  communication channels, you grant us the right to use,
+                  reproduce, and display that content for the purpose of
+                  responding to your inquiry and improving our services. We will
+                  not publicly display your personal messages without your
+                  explicit consent.
                 </p>
               </section>
             </div>
