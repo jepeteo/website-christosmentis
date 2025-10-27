@@ -88,7 +88,7 @@ export default function AboutPage() {
                   src="/images/christos-mentis.webp"
                   alt="Christos Mentis - Author Portrait"
                   fill
-                  className="object-cover object-top"
+                  className="object-cover"
                   priority
                 />
               </div>
