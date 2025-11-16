@@ -42,9 +42,12 @@ export const metadata: Metadata = {
 
 export default async function HomePage() {
   const allBooks = await getAllBooks();
+  const crimeBooks = await getBooksByGenre("crime");
+  const financeBooks = await getBooksByGenre("finance");
   const killerMindBooks = await getBooksInSeries("killer-mind");
 
-  const featuredBook = allBooks[0]; // Latest book
+  // Featured book is always the crime book (Fragments of a Killer Mind)
+  const featuredBook = crimeBooks[0];
 
   // Structured Data for Author
   const authorStructuredData = {
@@ -90,6 +93,14 @@ export default async function HomePage() {
           quote="What truly defines the human soul?"
           author="Christos Mentis"
         />
+
+        {financeBooks.length > 0 && (
+          <BooksGrid
+            books={financeBooks}
+            title="Financial Fiction"
+            description="Stories that blend financial wisdom with compelling narratives, exploring wealth, patience, and the power of long-term thinking."
+          />
+        )}
 
         <NewsletterCTA />
       </main>
