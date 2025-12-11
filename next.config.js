@@ -1,11 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     reactStrictMode: true,
-    eslint: {
-        // Only run ESLint on specific directories during production builds
-        // to avoid blocking deployment due to linting issues
-        ignoreDuringBuilds: true,
-    },
     typescript: {
         // We're already using TypeScript strict mode, so we can safely
         // skip type checking during build as it happens during development
