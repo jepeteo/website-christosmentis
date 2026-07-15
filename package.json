@@ -9,12 +9,20 @@
         "lint": "next lint",
         "test": "vitest",
         "test:ui": "vitest --ui",
-        "test:e2e": "playwright test"
+        "test:e2e": "playwright test",
+        "db:push": "drizzle-kit push",
+        "db:generate": "drizzle-kit generate",
+        "db:migrate": "tsx scripts/migrate-mdx-to-db.ts",
+        "db:seed": "tsx scripts/seed-author.ts"
     },
     "dependencies": {
         "@hookform/resolvers": "^3.3.4",
+        "@neondatabase/serverless": "^1.1.0",
         "@vercel/analytics": "^1.2.0",
+        "@vercel/blob": "^2.6.1",
+        "better-auth": "^1.6.23",
         "clsx": "^2.1.0",
+        "drizzle-orm": "^0.45.2",
         "framer-motion": "^11.0.0",
         "gray-matter": "^4.0.3",
         "lucide-react": "^0.375.0",
@@ -29,6 +37,9 @@
         "tailwind-merge": "^2.2.0",
         "zod": "^3.23.0"
     },
+    "overrides": {
+        "jose": "^6.1.0"
+    },
     "devDependencies": {
         "@eslint/js": "^9.39.2",
         "@playwright/test": "^1.42.0",
@@ -41,10 +52,13 @@
         "autoprefixer": "^10.4.0",
         "axe-core": "^4.8.0",
         "baseline-browser-mapping": "^2.9.11",
+        "dotenv": "^17.4.2",
+        "drizzle-kit": "^0.31.10",
         "eslint": "^8.57.1",
         "eslint-config-next": "^15.5.9",
         "postcss": "^8.4.0",
         "tailwindcss": "^3.4.0",
+        "tsx": "^4.23.1",
         "typescript": "^5.4.0",
         "vitest": "^4.0.16"
     }
