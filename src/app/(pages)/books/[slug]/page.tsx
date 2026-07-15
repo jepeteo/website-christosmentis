@@ -8,8 +8,10 @@ import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
-import { getAllBooks, getBookBySlug } from "@/lib/mdx";
+import { getAllBooks, getBookBySlug } from "@/lib/books";
 import { formatDate } from "@/lib/utils";
+
+export const revalidate = 3600;
 
 export async function generateStaticParams() {
   const books = await getAllBooks();

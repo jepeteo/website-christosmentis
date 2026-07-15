@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { getAllBooks } from '@/lib/mdx'
+import { getAllBooks } from '@/lib/books'
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = 'https://christosmentis.com'

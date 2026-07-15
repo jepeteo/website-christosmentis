@@ -6,7 +6,9 @@ import { SeriesShelf } from "@/components/sections/SeriesShelf";
 import { BooksGrid } from "@/components/sections/BooksGrid";
 import { QuoteStrip } from "@/components/sections/QuoteStrip";
 import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
-import { getAllBooks, getBooksInSeries, getBooksByGenre } from "@/lib/mdx";
+import { getAllBooks, getBooksInSeries, getBooksByGenre } from "@/lib/books";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title:

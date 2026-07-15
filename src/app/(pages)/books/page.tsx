@@ -3,7 +3,9 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BooksGrid } from "@/components/sections/BooksGrid";
 import { NewsletterCTA } from "@/components/sections/NewsletterCTA";
-import { getAllBooks } from "@/lib/mdx";
+import { getAllBooks } from "@/lib/books";
+
+export const revalidate = 3600;
 
 export const metadata: Metadata = {
   title: "Books",
