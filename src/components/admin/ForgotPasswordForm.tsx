@@ -4,13 +4,19 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { z } from 'zod'
 import { authClient } from '@/lib/auth/client'
-import {
-  forgotPasswordSchema,
-  type ForgotPasswordFormData,
-} from '@/lib/validations/schemas'
+import { getAuthErrorMessage } from '@/lib/auth/errors'
+import { forgotPasswordSchema } from '@/lib/validations/schemas'
+import { AuthHoneypot } from '@/components/admin/HoneypotField'
 import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
+
+const forgotFormSchema = forgotPasswordSchema.extend({
+  website: z.string().optional(),
+})
+
+type ForgotFormValues = z.infer<typeof forgotFormSchema>
 
 export function ForgotPasswordForm() {
   const [error, setError] = useState<string | null>(null)
@@ -19,13 +25,19 @@ export function ForgotPasswordForm() {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<ForgotPasswordFormData>({
-    resolver: zodResolver(forgotPasswordSchema),
+  } = useForm<ForgotFormValues>({
+    resolver: zodResolver(forgotFormSchema),
   })
 
-  const onSubmit = async (data: ForgotPasswordFormData) => {
+  const onSubmit = async (data: ForgotFormValues) => {
     setError(null)
     setSuccess(false)
+
+    // Honeypot: bots fill this; pretend success without sending email.
+    if (data.website?.trim()) {
+      setSuccess(true)
+      return
+    }
 
     const redirectTo = `${window.location.origin}/admin/reset-password`
 
@@ -35,7 +47,9 @@ export function ForgotPasswordForm() {
     })
 
     if (result.error) {
-      setError(result.error.message || 'Could not send reset email')
+      setError(
+        getAuthErrorMessage(result.error, 'Could not send reset email')
+      )
       return
     }
 
@@ -60,7 +74,9 @@ export function ForgotPasswordForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+    <form onSubmit={handleSubmit(onSubmit)} className="relative space-y-4">
+      <AuthHoneypot register={register} />
+
       <div>
         <label htmlFor="email" className="mb-2 block text-sm text-cm-muted">
           Email

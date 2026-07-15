@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { authClient } from '@/lib/auth/client'
+import { getAuthErrorMessage } from '@/lib/auth/errors'
 import {
   changePasswordSchema,
   type ChangePasswordFormData,
@@ -33,7 +34,9 @@ export function ChangePasswordForm() {
     })
 
     if (result.error) {
-      setError(result.error.message || 'Could not change password')
+      setError(
+        getAuthErrorMessage(result.error, 'Could not change password')
+      )
       return
     }
 

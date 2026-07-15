@@ -3,6 +3,7 @@ import { drizzleAdapter } from 'better-auth/adapters/drizzle'
 import { nextCookies } from 'better-auth/next-js'
 import { Resend } from 'resend'
 import { db } from '@/lib/db'
+import * as authSchema from '@/lib/db/auth-schema'
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -11,7 +12,20 @@ export const auth = betterAuth({
   secret: process.env.BETTER_AUTH_SECRET,
   database: drizzleAdapter(db, {
     provider: 'pg',
+    schema: authSchema,
   }),
+  rateLimit: {
+    enabled: true,
+    window: 60,
+    max: 30,
+    storage: 'database',
+    customRules: {
+      '/sign-in/email': { window: 60, max: 5 },
+      '/request-password-reset': { window: 300, max: 3 },
+      '/reset-password': { window: 300, max: 5 },
+      '/change-password': { window: 60, max: 5 },
+    },
+  },
   emailAndPassword: {
     enabled: true,
     disableSignUp: true,
