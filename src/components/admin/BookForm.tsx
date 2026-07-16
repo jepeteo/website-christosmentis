@@ -47,6 +47,9 @@ export function BookForm({ initialData, mode }: BookFormProps) {
   const [error, setError] = useState<string | null>(null)
   const [uploading, setUploading] = useState(false)
   const [slugEdited, setSlugEdited] = useState(mode === 'edit')
+  const [tagsDraft, setTagsDraft] = useState(() =>
+    (initialData?.tags ?? defaultValues.tags).join(', ')
+  )
 
   const {
     register,
@@ -67,7 +70,16 @@ export function BookForm({ initialData, mode }: BookFormProps) {
 
   const cover = watch('cover')
   const title = watch('title')
-  const tagsValue = watch('tags')
+
+  const parseTags = (value: string) =>
+    value
+      .split(',')
+      .map((tag) => tag.trim())
+      .filter(Boolean)
+
+  const syncTagsFromDraft = () => {
+    setValue('tags', parseTags(tagsDraft), { shouldValidate: true })
+  }
 
   const handleTitleBlur = () => {
     if (!slugEdited && title) {
@@ -98,8 +110,12 @@ export function BookForm({ initialData, mode }: BookFormProps) {
     setError(null)
 
     try {
+      const tags = parseTags(tagsDraft)
+      setValue('tags', tags)
+
       const payload = {
         ...data,
+        tags,
         seriesSlug: data.seriesSlug || undefined,
         excerpt: data.excerpt || undefined,
         isbn: data.isbn || undefined,
@@ -324,16 +340,9 @@ export function BookForm({ initialData, mode }: BookFormProps) {
             Tags (comma-separated)
           </label>
           <Input
-            value={Array.isArray(tagsValue) ? tagsValue.join(', ') : ''}
-            onChange={(e) =>
-              setValue(
-                'tags',
-                e.target.value
-                  .split(',')
-                  .map((tag) => tag.trim())
-                  .filter(Boolean)
-              )
-            }
+            value={tagsDraft}
+            onChange={(e) => setTagsDraft(e.target.value)}
+            onBlur={syncTagsFromDraft}
             placeholder="thriller, crime fiction"
           />
         </div>

@@ -87,7 +87,9 @@ export default async function BookPage({
     description: book.logline,
     genre: book.tags.join(", "),
     inLanguage: "en",
-    image: `https://christosmentis.com${book.cover}`,
+    image: book.cover.startsWith("http")
+      ? book.cover
+      : `https://christosmentis.com${book.cover}`,
     url: `https://christosmentis.com/books/${book.slug}`,
     offers: book.purchaseLinks.map((link) => ({
       "@type": "Offer",
